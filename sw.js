@@ -60,7 +60,7 @@ async function cacheFirst(request) {
     const responseFromCache = await caches.match(request);
     if(responseFromCache) return responseFromCache;
 
-    const responseFromNetwork = await fetch(request);
+    const responseFromNetwork = await fetch(request, {cache: "reload"});
 
     const cache = await caches.open(CACHE_NAME);
     await cache.put(request, responseFromNetwork.clone());
