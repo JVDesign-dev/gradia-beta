@@ -1,14 +1,12 @@
-const CACHE_NAME = 'Version 1.2';
+const CACHE_NAME = 'Version 1.0';
 const INFO = {
     get description() {
         return {de:`Dieses Update enthält Fehlerbehebungen${this.features.length < 1 ? `.`:` und führt diese neuen Features ein:`}`, en:`This update provides bug fixes${this.features.length < 1 ? `.`:` and introduces these new features:`}`}
     },
     features: [
-        {name:{de:`Tabellen-Sortierung`, en:`Table Sort`}, description:{de:`Die Tabellen können automatisch sortiert werden`, en:`Tables can be sorted automatically`}, version: '1.1'},
-        {name:{de:"Update-Historie", en:"Update History"}, description:{de:"Neue Features werden versionsübergreifend angezeigt", en:"New Features are displayed across all versions"}, version: '1.1'},
-        {name:{de:`Teilweise Datenlöschung`, en:`Partial Data Deletion`}, description:{de:`Einstellungen oder Noten können unabhängig voneinander gelöscht werden`, en:`Settings and Grades can be deleted independently`}, version: '1.1'},
+        //{name:{de:`Automatische Einstellungs-Speicherung`, en:`Auto-saving settings`}, description:{de:`Änderungen an den Einstellungen werden direkt gespeichert`, en:`Changes to the settings are saved automatically`}},
     ],
-    release: new Date('2024-02-14')
+    release: new Date('2024-11-05')
 };
 
 async function resourcesToCache(resources) {
@@ -23,8 +21,7 @@ self.addEventListener('install', (event) => {
             'style.css',
             'script.js',
             'background.jpg',
-            '/favicon.ico',
-            'changelog.json'
+            '/favicon.ico'
         ])
     )
     self.skipWaiting();
