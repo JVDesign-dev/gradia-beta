@@ -1,4 +1,4 @@
-const CACHE_NAME = 'Version 1.2';
+const CACHE_NAME = 'Version 1.3';
 const INFO = {
     get description() {
         return {de:`Dieses Update enthält Fehlerbehebungen${this.features.length < 1 ? `.`:` und führt diese neuen Features ein:`}`, en:`This update provides bug fixes${this.features.length < 1 ? `.`:` and introduces these new features:`}`}
@@ -29,8 +29,7 @@ self.addEventListener('install', (event) => {
             'style.css',
             'script.js',
             'background.jpg',
-            '/favicon.ico',
-            'changelog.json'
+            '/favicon.ico'
         ])
     )
     self.skipWaiting();
