@@ -8,7 +8,7 @@ const INFO = {
         {name:{de:"Update-Historie", en:"Update History"}, description:{de:"Neue Features werden versionsübergreifend angezeigt", en:"New Features are displayed across all versions"}, version: '1.1'},
         {name:{de:`Teilweise Datenlöschung`, en:`Partial Data Deletion`}, description:{de:`Einstellungen oder Noten können unabhängig voneinander gelöscht werden`, en:`Settings and Grades can be deleted independently`}, version: '1.1'},
     ],
-    release: new Date('2024-02-13')
+    release: new Date('2024-02-14')
 };
 
 async function resourcesToCache(resources) {
