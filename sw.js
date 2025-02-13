@@ -1,4 +1,4 @@
-const CACHE_NAME = 'Version 1.1';
+const CACHE_NAME = 'Version 1.2';
 const INFO = {
     get description() {
         return {de:`Dieses Update enthält Fehlerbehebungen${this.features.length < 1 ? `.`:` und führt diese neuen Features ein:`}`, en:`This update provides bug fixes${this.features.length < 1 ? `.`:` and introduces these new features:`}`}
@@ -13,7 +13,13 @@ const INFO = {
 
 async function resourcesToCache(resources) {
     const cache = await caches.open(CACHE_NAME);
-    await cache.addAll(resources);
+    
+    // Fetch all resources with `cache: "reload"` and store them in cache
+    await Promise.all(resources.map(async (resource) => {
+        const response = await fetch(resource, { cache: "reload" }); // Force fresh network fetch
+        if (!response.ok) throw new Error(`Failed to fetch ${resource}: ${response.statusText}`);
+        await cache.put(resource, response.clone());
+    }));
 }
 
 self.addEventListener('install', (event) => {

@@ -1,4 +1,4 @@
-const buildVersion = 'Version 1.1'
+const buildVersion = 'Version 1.2'
 
 let subjects = {
     version: buildVersion,
