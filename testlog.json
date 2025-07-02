@@ -30,23 +30,22 @@
             ]
         },
         {
-            "version": "Version 1.2",
-            "release": "2025-01-15",
+            "version": "Beta 1.1.2",
+            "release": "2025-07-02",
             "changes": [
                 {
-                    "id": "UI_update-history",
-                    "name": { "de": "Update-Historie", "en": "Update History" },
-                    "description": { "de": "Features können sortiert werden", "en": "Features can be sorted" },
-                    "alt_description": { "de": " und können sortiert werden", "en": " and can be sorted" },
-                    "tags": ["UI", "Updates"],
+                    "id": "DATA_datamanager",
+                    "name": { "de": "Integration von datamanager.js", "en": "Integration of datamanager.js" },
+                    "description": { "de": "Datenfluss basiert jetzt auf der datamanager.js API", "en": "Data Flow is now based on the datamanager.js API" },
+                    "tags": ["Data"],
                     "type": "improved"
                 },
                 {
-                    "id": "DATA_deletion",
-                    "name": { "de": "Datenlöschung", "en": "Data Deletion" },
-                    "description": { "de": "Nutzer können ihre Daten nicht mehr löschen", "en": "Users can't delete their data anymore" },
+                    "id": "DATA_files",
+                    "name": { "de": "Datei-Download", "en": "File Download" },
+                    "description": { "de": "Noten-Daten können jetzt als .grd/.grde-Datei heruntergeladen werden", "en": "Grade-Data can now be downloaded as .grd/.grde" },
                     "tags": ["UI", "Data"],
-                    "type": "discontinued"
+                    "type": "improved"
                 }
             ]
         },
